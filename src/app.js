@@ -81,3 +81,33 @@ window.cronometro = function() {
     segundos = 11;
   }
 };
+
+document
+  .getElementById("submitBtn")
+  .addEventListener("click", cambiarTamanoCarta);
+document
+  .getElementById("heightCard")
+  .addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      let heightValue = document.getElementById("heightCard").value;
+      let carta = document.getElementById("carta");
+      carta.style.height = heightValue + "px";
+    }
+  });
+document
+  .getElementById("widthCard")
+  .addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      let widthValue = document.getElementById("widthCard").value;
+      let carta = document.getElementById("carta");
+      carta.style.width = widthValue + "px";
+    }
+  });
+
+function cambiarTamanoCarta() {
+  let heightValue = document.getElementById("heightCard").value;
+  let widthValue = document.getElementById("widthCard").value;
+  let carta = document.getElementById("carta");
+  carta.style.width = widthValue + "px";
+  carta.style.height = heightValue + "px";
+}
