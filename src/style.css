@@ -3,18 +3,19 @@
 body {
   background-color: rgba(68, 186, 101, 1);
 }
-
+h1 {
+  font-size: 90px;
+}
 .carta {
   background-color: white;
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 450px;
   position: relative;
 }
 
 .heart,
 .heart-turned {
   color: red;
-  font-size: 90px;
   position: absolute;
 }
 
@@ -27,7 +28,6 @@ body {
 .spade,
 .spade-turned {
   color: rgb(0, 0, 0);
-  font-size: 90px;
   position: absolute;
 }
 
@@ -40,7 +40,6 @@ body {
 .club,
 .club-turned {
   color: rgb(0, 0, 0);
-  font-size: 90px;
   position: absolute;
 }
 
@@ -53,7 +52,6 @@ body {
 .diamond,
 .diamond-turned {
   color: red;
-  font-size: 90px;
   position: absolute;
 }
 
@@ -61,4 +59,11 @@ body {
   transform: rotate(180deg);
   bottom: 0;
   right: 0;
+}
+
+.numero {
+  position: relative;
+  top: 50%; /* Coloca el número en el centro vertical */
+  left: 50%; /* Coloca el número en el centro horizontal */
+  transform: translate(-50%, -50%);
 }
