@@ -23,3 +23,42 @@ body {
   bottom: 0;
   right: 0;
 }
+
+.spade,
+.spade-turned {
+  color: rgb(0, 0, 0);
+  font-size: 90px;
+  position: absolute;
+}
+
+.spade-turned {
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 0;
+}
+
+.club,
+.club-turned {
+  color: rgb(0, 0, 0);
+  font-size: 90px;
+  position: absolute;
+}
+
+.club-turned {
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 0;
+}
+
+.diamond,
+.diamond-turned {
+  color: red;
+  font-size: 90px;
+  position: absolute;
+}
+
+.diamond-turned {
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 0;
+}
