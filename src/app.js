@@ -111,3 +111,17 @@ function cambiarTamanoCarta() {
   carta.style.width = widthValue + "px";
   carta.style.height = heightValue + "px";
 }
+
+/*
+function cambiarTamanoLetra() {
+  let combi=(heightValue+widthValue)/2
+  let valorTexto = document.getElementsByTagName("h1");
+  switch (combi) {
+    case combi >=375:
+      valorTexto.style.fo=""
+      break;
+  
+    default:
+      break;
+  }
+}*/
