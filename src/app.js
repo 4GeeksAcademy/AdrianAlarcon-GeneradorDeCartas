@@ -4,13 +4,16 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-
+let segundos = 10;
+let intervalo;
 window.onload = function() {
   let numPalo = Math.floor(Math.random() * 4);
   let numCarta = Math.floor(Math.random() * 12) + 1;
-
+  let segundos = 10;
   checkType(numPalo, numCarta);
+  iniciarCronometro();
 };
+
 window.checkType = function(palo, numero) {
   let palos = ["heart", "club", "spade", "diamond"];
   let paloSeleccionado = palos[palo];
@@ -58,4 +61,22 @@ window.crearCarta = function(paloSeleccionado, icono, numFinal) {
   idCarta.innerHTML = `<h1 class="${paloSeleccionado} d-flex ms-4">${icono}</h1> 
   <h1 class="numero">${numFinal}</h1>
   <h1 class="${paloSeleccionado}-turned d-flex me-4">${icono}</h1>`;
+};
+
+document.getElementById("newCard").addEventListener("click", e => {
+  onload();
+});
+
+function iniciarCronometro() {
+  clearInterval(intervalo);
+  intervalo = setInterval(cronometro, 1000);
+}
+
+window.cronometro = function() {
+  segundos--;
+  document.getElementById("countdown").textContent = segundos;
+  if (segundos === 0) {
+    onload();
+    segundos = 11;
+  }
 };
