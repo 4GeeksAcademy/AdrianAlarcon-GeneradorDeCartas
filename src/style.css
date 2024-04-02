@@ -1,1 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: rgba(68, 186, 101, 1);
+}
+
+.carta {
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  position: relative;
+}
+
+.heart,
+.heart-turned {
+  color: red;
+  font-size: 90px;
+  position: absolute;
+}
+
+.heart-turned {
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 0;
+}
