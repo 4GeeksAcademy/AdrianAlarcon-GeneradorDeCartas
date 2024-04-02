@@ -6,6 +6,9 @@ body {
 h1 {
   font-size: 90px;
 }
+input {
+  width: 150px;
+}
 .carta {
   background-color: white;
   width: 300px;
@@ -63,8 +66,8 @@ h1 {
 
 .numero {
   position: relative;
-  top: 50%; /* Coloca el número en el centro vertical */
-  left: 50%; /* Coloca el número en el centro horizontal */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 

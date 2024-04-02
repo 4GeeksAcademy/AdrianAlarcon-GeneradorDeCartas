@@ -4,12 +4,10 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-let segundos = 10;
-let intervalo;
+
 window.onload = function() {
   let numPalo = Math.floor(Math.random() * 4);
   let numCarta = Math.floor(Math.random() * 12) + 1;
-  let segundos = 10;
   checkType(numPalo, numCarta);
   iniciarCronometro();
 };
@@ -66,6 +64,9 @@ window.crearCarta = function(paloSeleccionado, icono, numFinal) {
 document.getElementById("newCard").addEventListener("click", e => {
   onload();
 });
+
+let segundos = 10;
+let intervalo;
 
 function iniciarCronometro() {
   clearInterval(intervalo);
