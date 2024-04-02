@@ -9,12 +9,30 @@ window.onload = function() {
   let numPalo = Math.floor(Math.random() * 4);
   let numCarta = Math.floor(Math.random() * 12) + 1;
 
-  crearCarta(numPalo, numCarta);
+  checkType(numPalo, numCarta);
 };
-
-window.crearCarta = function(palo, numero) {
+window.checkType = function(palo, numero) {
   let palos = ["heart", "club", "spade", "diamond"];
   let paloSeleccionado = palos[palo];
+  let numFinal = "";
+  switch (numero) {
+    case 1:
+      numFinal = "A";
+      break;
+    case 10:
+      numFinal = "J";
+      break;
+    case 11:
+      numFinal = "Q";
+      break;
+    case 12:
+      numFinal = "K";
+      break;
+
+    default:
+      numFinal = numero;
+      break;
+  }
   let icono = "";
   switch (palo) {
     case 0:
@@ -30,11 +48,14 @@ window.crearCarta = function(palo, numero) {
       icono = "♦";
       break;
     default:
-      icono = "";
       break;
   }
+  crearCarta(paloSeleccionado, icono, numFinal);
+};
+
+window.crearCarta = function(paloSeleccionado, icono, numFinal) {
   let idCarta = document.getElementById("carta");
   idCarta.innerHTML = `<h1 class="${paloSeleccionado} d-flex ms-4">${icono}</h1> 
-  <h1 class="numero">${numero}</h1>
+  <h1 class="numero">${numFinal}</h1>
   <h1 class="${paloSeleccionado}-turned d-flex me-4">${icono}</h1>`;
 };
